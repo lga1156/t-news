@@ -1,0 +1,463 @@
+/* -------- базовый сброс -------- */
+*, *::before, *::after { box-sizing: border-box; }
+:root{
+  font-size:18px;
+  font-family:'Neue Haas Unica W1G', sans-serif;
+  --header-h:56px;
+  --bg:#f6f7f8;
+  --radius:8px;
+  --border:#e4e5e7;
+  --text:#666;
+}
+body{ margin:0; }
+
+/* -------- кнопки по умолчанию -------- */
+button{
+  background:none;
+  border:none;
+  padding:0;
+  margin:0;
+  cursor:pointer;
+  font:inherit;
+  color:inherit;
+}
+
+/* ================= HEADER ================= */
+.site-header{
+  height:var(--header-h);
+  background:var(--bg);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+}
+
+/* --- Лого --- */
+.logo-button{
+  flex:none;
+  width: 29px; height:29px;
+  display:flex;
+  align-items:center;
+  margin-right: 32px;
+  margin-left: 100px;
+}
+
+/* --- Поиск --- */
+.search{
+  position:relative;
+  flex:1 1 260px;         /* расширяется, но минимум 260px */
+}
+.search-input{
+  width: 320px;
+  height:32px;
+  padding-left: 10px; /* место под иконку слева */
+  border:0;
+  border-radius:var(--radius);
+  background:#eef0f2;
+  outline-offset:2px;
+}
+
+.search-input::placeholder{
+  color:rgba(0,0,0,.35);
+}
+
+/* --- Выход --- */
+.logout-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:15px;
+  color:var(--text);
+} /* лёгкий ховер */
+.logout-icon{ width:24px; height:24px; }
+
+.login-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:15px;
+  color:var(--text);
+  margin-left: 16px;
+  margin-right: 100px;
+} /* лёгкий ховер */
+.login-icon{ width:24px; height:24px; }
+
+.profile-btn{
+
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:15px;
+    margin-right: 100px;
+    padding-left: 16px;
+}
+.profile-photo{ width:32px; height:32px;}
+
+/* ---------- Карточка поста ---------- */
+.post-card{
+  max-width:824px;          /* ширина по макету */
+  width:100%;               /* сужается на мобильных */
+  margin:65px auto;       /* отступ снизу между постами */
+  padding:28px 32px;
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  font-size:0.95rem;
+  line-height:1.45;
+}
+
+/* шапка поста */
+.post-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:16px;
+}
+.post-avatar{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.post-author{
+  font-family: 'Tinkoff Sans';
+  margin:0;
+  font-size:1.25rem;
+  font-weight:500;
+}
+
+/* текст */
+.post-text{ margin:0 0 24px; }
+
+/* ---------- блок действий ---------- */
+.post-actions{
+  display:flex;
+  gap:16px;
+}
+
+/* базовый вид кнопок */
+.post-actions button{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border:none;
+  border-radius:12px;
+  font:inherit;
+  cursor:pointer;
+}
+
+/* лайк */
+.like-btn{
+  background:#ffcd00;
+  color:#333;
+}
+.like-btn .icon{
+  width:20px;height:20px;
+}
+
+/* комментарии */
+.comment-btn{
+  background:#eef0f2;
+  color:#007bff;
+}
+.comment-count{ font-weight:400; }
+/* ---------- Переключатель «Посты / Пользователи» ---------- */
+.content-switch{
+  max-width:824px;      /* та же ширина, что у поста */
+  width:100%;
+  margin:65px auto 0;   /* 65 px от шапки, 0 до постов */
+  display:flex;
+  gap:4px;
+}
+
+.switch-btn{
+  padding:10px 10px;
+  border:2px solid var(--border);
+  border-radius:12px;
+  background:#fff;
+  font:inherit;
+  font-size:15px;
+  color:var(--text);
+  cursor:pointer;
+  transition:border-color .15s, color .15s;
+}
+
+.switch-btn:hover{
+  border-color:#bfbfbf;
+}
+
+/* подсветка выбранной вкладки */
+.switch-btn.is-active{
+  border-color:#ffcd00;
+  font-weight:600;
+}
+
+/* ===== Секция «users-list» ===== */
+.users-list{
+  max-width:824px;
+  width:100%;
+  margin:48px auto 0;      /* 48 px отступ после переключателя */
+}
+
+.users{
+  list-style:none;         /* убираем маркеры ul */
+  padding:0;
+  margin:0;
+}
+
+/* единичный пользователь */
+.user{
+  margin-bottom:24px;      /* интервал между строками */
+}
+
+.user-link{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:#000;              /* базовый чёрный */
+  font-family:'Tinkoff Sans', sans-serif;
+  font-size:1.25rem;
+  font-weight:500;
+}
+
+.user-link:hover{
+  text-decoration:underline;
+}
+
+/* аватар */
+.user-avatar{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* ===== Комментарии ===== */
+.comments-list{
+  max-width:824px;
+  width:100%;
+  margin:40px auto;
+  padding-left: 100px;          /* отступ после поста */
+}
+
+.comment-card{
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,.06);
+  padding:20px 28px;
+  margin-bottom:32px;          /* интервал от формы */
+  font-size:0.95rem;
+}
+
+.comment-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+}
+
+.comment-avatar{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.comment-author{
+  font-family:'Tinkoff Sans',sans-serif;
+  font-size:1.1rem;
+  font-weight:600;
+  margin-right:auto;           /* “три точки” уйдут вправо */
+}
+
+.comment-menu img{ width:16px;height:16px; }
+
+/* ===== Форма добавления ===== */
+.add-comment{
+  max-width:824px;
+  width:100%;
+  margin:0 auto 120px;         /* небольшой «подвал» снизу */
+  display:flex;
+  flex-direction:column;
+  padding-left: 100px;
+}
+
+.comment-input{
+  width:100%;
+  min-height:120px;
+  padding:16px 20px;
+  border:none;
+  border-radius:16px;
+  background:#eef0f2;
+  resize:vertical;
+  font:inherit;
+  line-height:1.4;
+  margin-bottom:16px;
+  resize: none;
+}
+
+.comment-input::placeholder{ color:rgba(0,0,0,.35); }
+
+.send-btn{
+  align-self:flex-end;         /* кнопка у правого края */
+  padding:8px 22px;
+  background:#ffcd00;
+  border-radius:12px;
+  font:inherit;
+  font-size:15px;
+  color:#333;
+  cursor:pointer;
+}
+
+/* обёртка: текст + корзина в одну линию */
+.comment-body{
+  display:flex;
+  align-items:flex-start;   /* верхние края на одном уровне */
+  gap: 10px;
+}
+
+/* текст занимает всё доступное пространство */
+.comment-text{
+  margin:0;
+  line-height:1.4;
+}
+
+/* кнопка-корзина */
+.comment-delete{
+  flex:none;               /* не растягивается */
+  width:24px;
+  height:24px;
+  display:flex;
+  justify-content:left;
+  align-items:center;
+  background:transparent;
+  border:none;
+  cursor:pointer;
+}
+.comment-delete img{ width:16px;height:20px;}  /* лёгкий ховер-эффект */
+
+/* ===== Форма добавления ===== */
+.add-post{
+  padding-top: 74px;
+  max-width:824px;
+  width:100%;
+  margin:0 auto 120px;         /* небольшой «подвал» снизу */
+  display:flex;
+  flex-direction:column;
+}
+
+.post-input{
+  width:100%;
+  min-height:136px;
+  padding:16px 20px;
+  border:none;
+  border-radius:16px;
+  background:#eef0f2;
+  resize:vertical;
+  font:inherit;
+  line-height:1.4;
+  margin-bottom:16px;
+  resize: none;
+}
+
+.post-input::placeholder{ color:rgba(0,0,0,.35); }
+
+/* ===== Профиль пользователя ===== */
+.profile{
+  max-width:824px;
+  width:100%;
+  margin:65px auto 48px;          /* такой же отступ, как у постов */
+  display:flex;
+  gap:40px;
+  align-items:flex-start;
+}
+
+/* блок с фото */
+.profile-avatar-wrapper{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+}
+
+.profile-avatar{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #b6ff2e;       /* зелёное кольцо */
+}
+
+.profile-photo-change{
+  padding:6px 18px;
+  background:#4285f4;
+  border-radius:12px;
+  font-size:0.9rem;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* текстовая часть */
+.profile-info{ flex:1; }
+
+.profile-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.profile-name{
+  font-family:'Tinkoff Sans',sans-serif;
+  font-size:2rem;
+  font-weight:600;
+  margin:0;
+}
+
+.profile-edit{
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  width:20px;
+  height:20px;
+  padding:0;
+}
+
+.profile-edit img{width:100%;height:100%;}
+
+.subscribe-btn{
+  margin-left:auto;
+  padding:6px 22px;
+  background:#fff;
+  border:2px solid #ffcd00;
+  border-radius:12px;
+  font-size:0.95rem;
+  font-weight:500;
+  cursor:pointer;
+  transition:background .15s;
+}
+.subscribe-btn:hover{ background:#ffcd00; }
+
+.profile-bio{
+  margin-top:18px;
+  line-height:1.45;
+  position:relative;
+}
+
+/* «карандаш» в правом верхнем углу bio */
+.profile-bio .profile-edit{
+  position:absolute;
+  top:0;
+  right:-28px;
+}
+
+/* мобильная адаптация */
+@media (max-width:600px){
+  .profile{
+    flex-direction:column;
+    align-items:center;
+  }
+  .profile-bio .profile-edit{ right:0; }
+  .subscribe-btn{ margin-left:0; margin-top:12px; }
+}

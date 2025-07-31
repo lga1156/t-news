@@ -1,0 +1,153 @@
+/* -------- базовый сброс -------- */
+*, *::before, *::after { box-sizing: border-box; }
+:root{
+  font-size:18px;
+  font-family:'Neue Haas Unica W1G', sans-serif;
+  --header-h:56px;
+  --bg:#f6f7f8;
+  --radius:8px;
+  --border:#e4e5e7;
+  --text:#666;
+}
+body{ margin:0; }
+
+/* -------- кнопки по умолчанию -------- */
+button{
+  background:none;
+  border:none;
+  padding:0;
+  margin:0;
+  cursor:pointer;
+  font:inherit;
+  color:inherit;
+}
+
+/* ================= HEADER ================= */
+.site-header{
+  height:var(--header-h);
+  background:var(--bg);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+}
+
+/* --- Лого --- */
+.logo-button{
+  flex:none;
+  width: 29px; height:29px;
+  display:flex;
+  align-items:center;
+  margin-right: 32px;
+  margin-left: 100px;
+}
+
+/* --- Поиск --- */
+.search{
+  position:relative;
+  flex:1 1 260px;         /* расширяется, но минимум 260px */
+}
+.search-input{
+  width: 320px;
+  height:32px;
+  padding-left: 10px; /* место под иконку слева */
+  border:0;
+  border-radius:var(--radius);
+  background:#eef0f2;
+  outline-offset:2px;
+}
+
+.search-input::placeholder{
+  color:rgba(0,0,0,.35);
+}
+
+/* --- Выход --- */
+.logout-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:15px;
+  color:var(--text);
+} /* лёгкий ховер */
+.logout-icon{ width:24px; height:24px; }
+
+.profile-btn{
+
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:15px;
+    margin-right: 100px;
+    padding-left: 16px;
+}
+.profile-photo{ width:32px; height:32px;}
+
+/* ---------- Карточка поста ---------- */
+.post-card{
+  max-width:824px;          /* ширина по макету */
+  width:100%;               /* сужается на мобильных */
+  margin:65px auto;       /* отступ снизу между постами */
+  padding:28px 32px;
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  font-size:0.95rem;
+  line-height:1.45;
+}
+
+/* шапка поста */
+.post-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:16px;
+}
+.post-avatar{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.post-author{
+  font-family: 'Tinkoff Sans';
+  margin:0;
+  font-size:1.25rem;
+  font-weight:500;
+}
+
+/* текст */
+.post-text{ margin:0 0 24px; }
+
+/* ---------- блок действий ---------- */
+.post-actions{
+  display:flex;
+  gap:16px;
+}
+
+/* базовый вид кнопок */
+.post-actions button{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border:none;
+  border-radius:12px;
+  font:inherit;
+  cursor:pointer;
+}
+
+/* лайк */
+.like-btn{
+  background:#ffcd00;
+  color:#333;
+}
+.like-btn .icon{
+  width:20px;height:20px;
+}
+
+/* комментарии */
+.comment-btn{
+  background:#eef0f2;
+  color:#007bff;        /* синий текст как на примере */
+}
+.comment-count{ font-weight:600; }

@@ -1,0 +1,117 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 18px;
+    font-family: 'Neue Haas Unica W1G';
+    
+}
+
+input {
+    font: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-header {
+    background-color: rgb(246, 247, 248);
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 1rem;
+}
+
+.logo-button {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    width: 29px;
+    height: 29px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.signup-form {
+  padding: 16px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-height: 414px;
+  max-width: 368px;
+}
+
+
+.register-form {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Tinkoff Sans';
+}
+
+
+
+.signup-form input{
+  padding: 14px 18px;
+  border: none;
+  border-radius: 16px;
+  background-color: #f5f6fa;
+  width: 100%;
+  color: #333;
+  outline: none;
+
+  /* главное изменение ↓ */
+  margin-bottom: 20px;     /* 20 px между Login и Password */
+  font-size: 0.8rem;
+}
+
+.signup-form input:last-of-type{
+  margin-bottom: 24px;     /* 24 px до блока кнопок */
+}
+
+
+.signup-form input::placeholder {
+  color: #999;
+}
+
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.login-button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #f5f6fa;
+  color: #007bff;
+  border: none;
+}
+
+.register-button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #ffcd00;
+  color: rgb(51, 51, 51);
+  border: none;
+  cursor: pointer;
+}

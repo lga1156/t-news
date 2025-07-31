@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-News</title>
+  <link rel="stylesheet" href="style/main-auth.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <!-- Лого -->
+    <button class="logo-button" type="button" aria-label="На главную">
+      <!-- замените src на свой файл -->
+      <img src="img/33447f85-5b92-42f9-8d88-509bd152b47c.svg" alt="" aria-hidden="true">
+    </button>
+
+    <!-- Поиск -->
+    <label class="search">
+      <input type="text" placeholder="Поиск по T-News" class="search-input">
+    </label>
+
+    <!-- Кнопка «Выйти» -->
+    <button class="logout-btn" type="button">
+      <span class="logout-text">Выйти</span>
+      <img src="img/exit.svg" class="logout-icon" alt="" aria-hidden="true">
+    </button>
+
+    <button class="profile-btn" type="button">
+      <img src="img/profile.svg" class="profile-icon" alt="" aria-hidden="true">
+    </button>
+  </header>
+
+    <!-- блок-переключатель под поиском -->
+<section class="content-switch">
+  <button class="switch-btn" type="button" id="usersBtn">
+    Пользователи
+  </button>
+
+  <!-- «активная» кнопка — добавляем модификатор .is-active -->
+  <button class="switch-btn is-active" type="button" id="postsBtn">
+    Посты
+  </button>
+</section>
+
+<!-- ===== Список пользователей =================================== -->
+<section class="users-list">
+  <ul class="users">
+    <li class="user">
+      <a class="user-link" href="#profile-1">
+        <img class="user-avatar" src="img/vkafcu2emkgl-gesiod.webp" alt="">
+        <span class="user-name">Гай Юлий Цезарь Виспасиан</span>
+      </a>
+    </li>
+
+    <li class="user">
+      <a class="user-link" href="#profile-2">
+        <!-- если аватара нет, можно оставить пустой src или поставить placeholder -->
+        <img class="user-avatar" src="img/vkafcu2emkgl-gesiod.webp" alt="">
+        <span class="user-name">Гай Юлий Гигин</span>
+      </a>
+    </li>
+
+    <li class="user">
+      <a class="user-link" href="#profile-3">
+        <img class="user-avatar" src="img/vkafcu2emkgl-gesiod.webp" alt="">
+        <span class="user-name">Гай Юлий Цезарь Октавиан Август</span>
+      </a>
+    </li>
+
+    <li class="user">
+      <a class="user-link" href="#profile-4">
+        <img class="user-avatar" src="img/vkafcu2emkgl-gesiod.webp" alt="">
+        <span class="user-name">Гай Юлий Цезарь</span>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

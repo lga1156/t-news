@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-News</title>
+  <link rel="stylesheet" href="style/main-auth.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <!-- Лого -->
+    <button class="logo-button" type="button" aria-label="На главную">
+      <!-- замените src на свой файл -->
+      <img src="img/33447f85-5b92-42f9-8d88-509bd152b47c.svg" alt="" aria-hidden="true">
+    </button>
+
+    <!-- Поиск -->
+    <label class="search">
+      <input type="text" placeholder="Поиск по T-News" class="search-input">
+    </label>
+
+    <!-- Кнопка «Выйти» -->
+    <button class="logout-btn" type="button">
+      <span class="logout-text">Выйти</span>
+      <img src="img/exit.svg" class="logout-icon" alt="" aria-hidden="true">
+    </button>
+
+    <button class="profile-btn" type="button">
+      <img src="img/profile.svg" class="profile-icon" alt="" aria-hidden="true">
+    </button>
+  </header>
+
+  <main>
+
+    <!-- блок-переключатель под поиском -->
+<section class="content-switch">
+  <button class="switch-btn" type="button" id="usersBtn">
+    Пользователи
+  </button>
+
+  <!-- «активная» кнопка — добавляем модификатор .is-active -->
+  <button class="switch-btn is-active" type="button" id="postsBtn">
+    Посты
+  </button>
+</section>
+
+    <section>
+
+<article class="post-card">
+  <header class="post-header">
+    <!-- аватар автора -->
+    <img src="img/vkafcu2emkgl-gesiod.webp" alt="Аватар" class="post-avatar">
+
+    <!-- имя автора -->
+    <span class="post-author">Луций Анней Сенека</span>
+  </header>
+
+  <!-- текст поста -->
+  <p class="post-text">
+    Говорят, что Гай Цезарь отличался помимо прочих немалочисленных своих пороков каким-то удивительным сладострастием в оскорблениях; ему непременно нужно было на всякого повесить какой-нибудь обидный ярлык, при том что сам он представлял собой благодатнейший материал для насмешек: омерзительная бледность, выдающая безумие; дикий взгляд глубоко спрятанных под старческим лбом глаз; неправильной формы безобразная лысая голова с торчащими там и сям жалкими волосёнками; прибавь к этому шею, заросшую толстенной щетиной, тонюсенькие ножки и чудовищно громадные ступни.
+При этом тот же Гай принимал за оскорбление любой пустяк, как это чаще всего и бывает: чем больше человек склонен обижать других, тем хуже он сам переносит обиды… 
+  </p>
+
+  <!-- блок действий -->
+  <div class="post-actions">
+    <!-- лайк -->
+    <button class="like-btn">
+      <img src="https://api.iconify.design/material-symbols:favorite-outline.svg" alt="" class="icon" aria-hidden="true">
+      <span class="like-count">9</span>
+    </button>
+
+    <!-- комментарии -->
+    <button class="comment-btn">
+      Комментарии <span class="comment-count">5</span>
+    </button>
+  </div>
+</article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

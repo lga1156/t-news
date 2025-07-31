@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-News</title>
+  <link rel="stylesheet" href="style/profile.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <!-- Лого -->
+    <button class="logo-button" type="button" aria-label="На главную">
+      <!-- замените src на свой файл -->
+      <img src="img/33447f85-5b92-42f9-8d88-509bd152b47c.svg" alt="" aria-hidden="true">
+    </button>
+
+    <!-- Поиск -->
+    <label class="search">
+      <input type="text" placeholder="Поиск по T-News" class="search-input">
+    </label>
+
+    <!-- Кнопка «Выйти» -->
+    <button class="logout-btn" type="button">
+      <span class="logout-text">Выйти</span>
+      <img src="img/exit.svg" class="logout-icon" alt="" aria-hidden="true">
+    </button>
+
+    <button class="profile-btn" type="button">
+      <img src="img/profile.svg" class="profile-icon" alt="" aria-hidden="true">
+    </button>
+  </header>
+
+  <main>
+    <section>
+        <!-- === Вставьте в <main> (сколько нужно раз) ======================= -->
+
+    </section>
+  </main>
+
+  <!-- ===== Секция «Профиль» ===== -->
+<section class="profile">
+  <!-- аватар + кнопка -->
+  <div class="profile-avatar-wrapper">
+    <img src="img/vkafcu2emkgl-gesiod.webp"
+         alt="Аватар Луция Аннея Сенеки"
+         class="profile-avatar">
+
+    <button class="profile-photo-change" type="button">
+      Изменить фото
+    </button>
+  </div>
+
+  <!-- основная информация -->
+  <div class="profile-info">
+    <!-- имя + «карандаш» + «Подписаться» -->
+    <div class="profile-header">
+      <h1 class="profile-name">Луций&nbsp;Анней&nbsp;Сенека</h1>
+
+      <button class="profile-edit" aria-label="Редактировать имя">
+        <img src="img/MaterialSymbolsEditSquareOutline.svg" alt="" aria-hidden="true">
+      </button>
+
+      <button class="subscribe-btn" type="button">
+        Подписаться
+      </button>
+    </div>
+
+    <!-- биография -->
+    <p class="profile-bio">
+      Римский философ-стоик, поэт и государственный деятель.
+      Воспитатель Нерона и один из крупнейших представителей стоицизма.
+      Сын Луция (Марка) Аннея Сенеки Старшего (выдающегося оратора
+      и историка) и Гельвии, младший брат Юния Галлиона. Автор
+      «Нравственных писем к Луцилию», ряда философских трактатов и трагедий
+      <button class="profile-edit" aria-label="Редактировать текст">
+        <img src="img/MaterialSymbolsEditSquareOutline.svg" alt="" aria-hidden="true">
+      </button>
+    </p>
+  </div>
+</section>
+
+
+  <!-- ===== Список комментариев ===== -->
+<form class="add-post" action="#" method="post">
+  <textarea class="post-input"
+            placeholder="Введите свой пост"
+            rows="3" required></textarea>
+
+  <button class="send-btn" type="button">Отправить</button>
+</form>
+
+    <article class="post-card">
+  <header class="post-header">
+    <!-- аватар автора -->
+    <img src="img/vkafcu2emkgl-gesiod.webp" alt="Аватар" class="post-avatar">
+
+    <!-- имя автора -->
+    <span class="post-author">Луций Анней Сенека</span>
+  </header>
+
+  <!-- текст поста -->
+  <p class="post-text">
+    Человек, которого застеклённые окна защищали от малейшего
+    дуновения, на чьих ногах постоянно менялись мягкие согревающие
+    повязки, у кого в столовой под полом и в стенах всегда работало
+    отопление, подвергается смертельной опасности, даже если его
+    коснётся самый лёгкий ветерок.
+  </p>
+
+  <!-- блок действий -->
+  <div class="post-actions">
+    <!-- лайк -->
+    <button class="like-btn">
+      <img src="https://api.iconify.design/material-symbols:favorite-outline.svg" alt="" class="icon" aria-hidden="true">
+      <span class="like-count">21</span>
+    </button>
+
+    <!-- комментарии -->
+    <button class="comment-btn">
+      Комментарии <span class="comment-count">1</span>
+    </button>
+  </div>
+</article>
+
+  <script src="script.js"></script>
+</body>
+</html>
