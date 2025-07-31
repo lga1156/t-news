@@ -1,0 +1,140 @@
+/* ===== Профиль пользователя ===== */
+.profile {
+  max-width: 824px;
+  width: 100%;
+  margin: 65px auto 0; /* такой же отступ, как у постов */
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* блок с фото */
+.profile-avatar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.profile-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #b6ff2e; /* зелёное кольцо */
+}
+
+.profile-photo-change {
+  padding: 6px 18px;
+  background: #4285f4;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* текстовая часть */
+.profile-info {
+  flex: 1;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-name {
+  font-family: 'Tinkoff Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.profile-edit {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
+.profile-edit img {
+  width: 100%;
+  height: 100%;
+}
+
+.subscribe-btn {
+  margin-left: auto;
+  padding: 6px 22px;
+  background: #fff;
+  border: 2px solid gray;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+  color: #007bff;
+}
+.subscribe-btn:hover {
+  background: #ffcd00;
+}
+
+.profile-bio {
+  margin-top: 18px;
+  line-height: 1.45;
+  position: relative;
+}
+
+/* «карандаш» в правом верхнем углу bio */
+.profile-bio .profile-edit {
+  position: absolute;
+  top: 0;
+  right: -28px;
+}
+
+.add-post {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 824px;
+  margin: 70px auto 40px auto;
+  padding: 0 16px;
+}
+
+.post-input {
+  width: 100%;
+  min-height: 120px;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 16px;
+  background-color: #f7f8f8;
+  resize: vertical;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  color: #333;
+}
+
+.send-btn {
+  align-self: flex-end;
+  background-color: #ffcd00;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.send-btn:hover {
+  background-color: #e6b800;
+}
+
+.post-card {
+  max-width: 814px;
+  margin: 65px auto;
+}
